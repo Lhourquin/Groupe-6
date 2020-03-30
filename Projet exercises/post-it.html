@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Post-it</h1>
+    <button type="button" id="cacher">Cache</button>
+    <button type="button" id="afficher">Affiche</button>
+    <div style="background-color: yellow; display: none;" id="post-it">Vous avez cliqué sur le boutton 'Affiche'</div>
+
+    <p>Merci de bien vouloir me survoler</p>
+
+
+
+
+    <script>
+                     var cache = document.getElementById("cacher");
+                    var affiche = document.getElementById("afficher");
+                    var div = document.getElementById("post-it");
+
+
+
+            affiche.addEventListener('click', showFunction);
+            cache.addEventListener('click', hideFunction);
+
+            function showFunction() {
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            }
+            }
+
+            function hideFunction() {
+                if(div.style.display === "block") {
+                    div.style.display = "none";
+                }
+            }
+
+    </script>
+
+
+
+
+</body>
+</html>

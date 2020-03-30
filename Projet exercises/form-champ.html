@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h3>Saisissez un texte puis pressez le bouton 'Contrôle'</h3>
+<input type="text" id="text">
+<input type="button" value="Contrôler" id="control" onclick="valert();">
+
+
+<script>
+var text = document.getElementById("text");
+var control = document.getElementById("control");
+
+
+function valert() {
+    if (text.value.length <= 0) {
+        alert("La saisie de caractères est obligatoire.")
+    }
+    else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(text.value) == false) {
+         alert("Vous n'avez pas choisi les caractères esperés.")
+    }
+
+    else {
+        alert("Vous avez saisi : " + text.value)
+    }
+
+}
+
+</script>
+
+</body>
+</html>

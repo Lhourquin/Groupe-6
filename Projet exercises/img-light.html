@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ampoule sans fil</h1>
+    <img src="AmpouleHS.GIF" id="ampoule-hs">
+    <img src="AmpouleOK.GIF" id="ampoule-ok" style="display: none;">
+    <h2>Cliquer sur l'ampoule pour l'allumer ou l'éteindre</h2>
+
+
+    <script>
+        var ampouleHs = document.getElementById('ampoule-hs');
+        var ampouleOk = document.getElementById('ampoule-ok');
+
+        function lightOn() {
+          if (ampouleOk.style.display === "none") {
+              ampouleOk.style.display = "block"
+              ampouleHs.style.display = "none"
+          }
+        }
+        
+        function lightOff() {
+            if(ampouleHs.style.display === "none") {
+                ampouleHs.style.display = "block"
+                ampouleOk.style.display = "none"
+            }
+        }
+
+       ampouleHs.addEventListener("click", lightOn)
+       ampouleOk.addEventListener("click", lightOff)
+
+    </script>
+
+
+</body>
+</html>

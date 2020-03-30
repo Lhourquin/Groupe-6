@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for='nombre'>Un nombre svp :</label>
+<input type="text" name="number" id="nombre">
+    </div>
+ 
+    <div>
+    <label for="text">Un texte svp</label>
+    <input type="text" name="text" id="text"> 
+ </div>
+
+<input type="submit" id="submit" value="Envoyer du texte dans une autre page !"> 
+<p id="p-txt"></p>
+<p id="p-nb"></p>
+
+
+
+<script>
+
+
+    var submit = document.getElementById("submit");
+    var txt = document.getElementById("text");
+    var nb = document.getElementById("nombre");
+    var ptxt = document.getElementById("p-txt");
+    var pnb = document.getElementById("p-nb");
+
+    submit.addEventListener("click",myTxtValue);
+    submit.addEventListener("click", myNbValue);
+
+    function myTxtValue() {
+       ptxt.innerHTML = txt.value
+    }
+
+    function myNbValue() {
+        pnb.innerHTML = nb.value
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="radio" id="huey" name="drone" value="Semaine"
+    checked="checked" >
+        Semaine
+      </div>
+      
+      <div>
+        <input type="radio" id="dewey" name="drone" value="Week-end">
+        Week-end
+      </div>
+      <input type="submit" value="Choix" id="choix" >
+<p id="reponse"></p>
+     
+
+
+
+
+       <script>
+    
+    
+    var response = document.getElementById("reponse");
+    var radios = document.getElementsByName("drone");
+    var btn = document.getElementById("choix");
+    btn.addEventListener("click", function () {
+for (let drone of radios){
+    if (drone.checked){
+        response.innerHTML = drone.value;
+    }
+}
+    });
+       </script>
+</body>
+</html>
